@@ -73,13 +73,6 @@ VectorXd Tools::Polar2Cartesian(const VectorXd& Polar_data){
     float vx = rho_dot * cos(phi);
     float vy = rho_dot * sin(phi);
     
-    if (px == 0){
-        px = 1;
-    }
-    if (py == 0){
-        py = 1;
-    }
-    
     c_state << px, py, vx, vy;
     return c_state;
 }
